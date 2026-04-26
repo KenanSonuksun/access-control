@@ -1,0 +1,22 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+logging:
+  level:
+    root: INFO
+    com.project.accesscontrollab: INFO
+    org.springframework.web: WARN
+    org.springframework.security: WARN
+    org.springframework.boot.actuate: INFO
+    org.flywaydb: INFO
+
+management:
+  endpoint:
+    health:
+      show-details: when-authorized
+
+app:
+  features:
+    request-log-enabled: false

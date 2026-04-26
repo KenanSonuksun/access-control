@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Admin Page</h1>
+
+<p>Welcome admin, <span th:text="${username}"></span></p>
+
+<p>Your authorities:</p>
+<ul>
+    <li th:each="authority : ${authorities}" th:text="${authority}"></li>
+</ul>
+
+<a th:href="@{/dashboard}">Go to Dashboard</a>
+
+<form th:action="@{/logout}" method="post">
+    <input type="hidden"
+           th:name="${_csrf.parameterName}"
+           th:value="${_csrf.token}" />
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>

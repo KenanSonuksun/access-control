@@ -1,0 +1,29 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+
+logging:
+  level:
+    root: INFO
+    com.project.accesscontrollab: DEBUG
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.flywaydb: DEBUG
+
+management:
+  endpoint:
+    health:
+      show-details: always
+
+app:
+  cors:
+    allowed-origins:
+      - http://localhost:3000
+      - http://127.0.0.1:3000
+  security:
+    jwt-secret: local-dev-secret-key-for-access-control-123456
+    access-token-expiration-minutes: 15
+    refresh-token-expiration-days: 7
+  features:
+    request-log-enabled: true
