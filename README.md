@@ -1,3 +1,7 @@
+![Java](https://img.shields.io/badge/Java-21-blue)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green)
+![Docker](https://img.shields.io/badge/Config-Settings-blue)
+
 # Access Control
 
 A Spring Boot security lab that implements **both Session-Based Authentication and JWT-Based Authentication in the same backend**.
